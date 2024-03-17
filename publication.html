@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NERTU</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+    </style>
+    <script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <span class="navbar-brand mx-5" style="font:25px sans-serif;"><img src="assets/nertulogo.jpeg"
+                        class="img-rounded" style="height: 30px; padding-right: 5px; margin-top: -5pt;" />NERTU</span>
+                <button type="button" class="navbar-toggler mx-5" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse mx-5 justify-content-end" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="/home.html" class="nav-item nav-link"><i class="fa-solid fa-house"></i> Home</a>
+                        <a href="/gallery.html" class="nav-item nav-link"><i class="fa-solid fa-image"></i> Gallery</a>
+                        <a href="/workshop.html" class="nav-item nav-link"><i class="fa-solid fa-window-restore"></i>
+                            Workshop</a>
+                        <a href="/project.html" class="nav-item nav-link"><i class="fa-solid fa-address-book"></i>
+                            Project</a>
+                        <a href="/publication.html" class="nav-item nav-link"><i class="fa-solid fa-file-lines"></i>
+                            Publication</a>
+                        <a href="/staff.html" class="nav-item nav-link"><i class="fa-solid fa-clipboard-user"></i>
+                            Staff</a>
+                        <a href="###" class="nav-item nav-link"><i class="fa-solid fa-download"></i> Download</a>
+                        <a href="/contact.html" class="nav-item nav-link"><i class="fa-solid fa-address-book"></i>
+                            Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="workshop" class="m-4 pt-2">
+        <div>
+            <h1 class="text-center text-info py-5" style="font-weight: 800; font-size: 40">
+                Publication
+            </h1>
+        </div>
+        <div class="m-5" style="border: 10px;">
+            <table id="myTable" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th class="number">S_No</th>
+                        <th class="string" onclick="sortTable(1)">Title</th>
+                        <th class="string" onclick="sortTable(2)">Subject</th>
+                        <th class="string" onclick="sortTable(3)">Duration</th>
+                        <th class="string" onclick="sortTable(4)">Code</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr>
+                        <td class="number">1</td>
+                        <td class="string">5-Day Short Course on “GNSS Technologies: Fundamentals & Applications</td>
+                        <td class="string">GNSS</td>
+                        <td class="string">2022</td>
+                        <td class="string">11-15, October, 2022 SC/84</td>
+                    </tr>
+                    <tr>
+                        <td class="number">2</td>
+                        <td class="string">2-Day Symposium on “Current Research Trends In Navigation Systems</td>
+                        <td class="string">GNSS</td>
+                        <td class="string">2022</td>
+                        <td class="string">14-15, October 2022 SC/83</td>
+                    </tr>
+                    <tr>
+                        <td class="number">3</td>
+                        <td class="string">5-Day School on “GNSS Signal Processing: Advances In Signal Structure And
+                            Receivers
+                        </td>
+                        <td class="string">GNSS</td>
+                        <td class="string">2022</td>
+                        <td class="string">17-21, October 2022 SC/82</td>
+                    </tr>
+                    <tr>
+                        <td class="number">4</td>
+                        <td class="string">One Day symposium on “Speech and Language Technologies for Man-Machine
+                            Communication”
+                            (SLT-22)</td>
+                        <td class="string">SSP</td>
+                        <td class="string">2022</td>
+                        <td class="string">16th April 2022 SC/81</td>
+                    </tr>
+                    <tr>
+                        <td class="number">5</td>
+                        <td class="string">One Day symposium on “Navigation for Man Made Vehicles and Migrating Natural
+                            Fliers”
+                            (BMAV-22)</td>
+                        <td class="string">GNSS</td>
+                        <td class="string">2022</td>
+                        <td class="string">26th March 2022 SC/80</td>
+                    </tr>
+                    <tr>
+                        <td class="number">6</td>
+                        <td class="string">One Day Workshop on “Design and Development Of GNSS Receivers” (GNSSR-21)
+                        </td>
+                        <td class="string">GNSS</td>
+                        <td class="string">2021</td>
+                        <td class="string">12th January 2021 SC/79</td>
+                    </tr>
+                    <tr>
+                        <td class="number">7</td>
+                        <td class="string">Semester Course on “Speech and Language Technologies using Artificial
+                            Intelligence
+                            and Deep Learning” (SLT-20) (Online Mode)</td>
+                        <td class="string">SSP</td>
+                        <td class="string">2020</td>
+                        <td class="string">21st September 2020 to 07th November 2020 SC/78</td>
+                    </tr>
+                    <tr>
+                        <td class="number">8</td>
+                        <td class="string">5-Day School on “GNSS and IRNSS Software Receiver: Signal Processing And Its
+                            Applications</td>
+                        <td class="string">GNSS</td>
+                        <td class="string">2019</td>
+                        <td class="string">9-13, September 2019 SC/77</td>
+                    </tr>
+                    <tr>
+                        <td class="number">9</td>
+                        <td class="string">2-Day Symposium on “Trends In GNSS Research</td>
+                        <td class="string">GNSS</td>
+                        <td class="string">2019</td>
+                        <td class="string">8-9, September 2019 SC/76</td>
+                    </tr>
+                    <tr>
+                        <td class="number">10</td>
+                        <td class="string">4-Day Short Course on “GNSS Technologies: Fundamentals & Applications</td>
+                        <td class="string">GNSS</td>
+                        <td class="string">2019</td>
+                        <td class="string">5-8, September 2019 SC/75</td>
+                    </tr>
+                    <tr>
+                        <td class="number">11</td>
+                        <td class="string">Summer school on “Digital Signal Processing and Communication with
+                            Programming”,
+                            (Four Weeks with Theory and Practice)</td>
+                        <td class="string">DSPC</td>
+                        <td class="string">2019</td>
+                        <td class="string">20th May 2019 to 15th June 2019 SC/74</td>
+                    </tr>
+                    <tr>
+                        <td class="number">12</td>
+                        <td class="string">5-Day School on MACHINE LEARNING, DEEP NEURAL NETWORKS AND ASR (ASR-19)</td>
+                        <td class="string">SSP</td>
+                        <td class="string">2019</td>
+                        <td class="string">08-12, MARCH 2019 SC/73</td>
+                    </tr>
+                    <tr>
+                        <td class="number">13</td>
+                        <td class="string">A School on Probability Theory and Stochastic Processes (PTSP-19) (For
+                            Scientists
+                            and
+                            Engineers) (Thee Days in a Week: Mon, Wed, Sat)</td>
+                        <td class="string">PTSP</td>
+                        <td class="string">2019</td>
+                        <td class="string">21 January 2019 to 13, April 2019 SC/72</td>
+                    </tr>
+                    <tr>
+                        <td class="number">14</td>
+                        <td class="string">One day workshop on “Recent Innovations in Cognitive Radio and Software
+                            Defined
+                            Radio
+                        </td>
+                        <td class="string">DSPC</td>
+                        <td class="string">2018</td>
+                        <td class="string">29, December 2018 ***</td>
+                    </tr>
+                    <tr>
+                        <td class="number">15</td>
+                        <td class="string">3-Day Short Course on “Migration, Navigation and Bio-Mimicking Aerial
+                            Vehicles
+                        </td>
+                        <td class="string">GNSS</td>
+                        <td class="string">2018</td>
+                        <td class="string">12-14, October 2018 SC/71</td>
+                    </tr>
+                    <tr>
+                        <td class="number">16</td>
+                        <td class="string">One week school on 'Advanced GNSS Signal Processing'</td>
+                        <td class="string">GNSS</td>
+                        <td class="string">2018</td>
+                        <td class="string">20-25, August 2018 SC/70</td>
+                    </tr>
+                    <tr>
+                        <td class="number">17</td>
+                        <td class="string">4-day short course on 'Advances in GNSS Technologies and Its applications'
+                        </td>
+                        <td class="string">GNSS</td>
+                        <td class="string">2018</td>
+                        <td class="string">16-19, August 2018 SC/69</td>
+                    </tr>
+                    <tr>
+                        <td class="number">18</td>
+                        <td class="string">One Week course on 'GNSS Signal Processing'</td>
+                        <td class="string">GNSS</td>
+                        <td class="string">2017</td>
+                        <td class="string">04-09, December 2017 SC/68</td>
+                    </tr>
+                    <tr>
+                        <td class="number">19</td>
+                        <td class="string">3-Day course on 'GNSS Technologies and Applications'</td>
+                        <td class="string">GNSS</td>
+                        <td class="string">2017</td>
+                        <td class="string">20-22, October 2017 SC/67</td>
+                    </tr>
+                    <tr>
+                        <td class="number">20</td>
+                        <td class="string">One-Day Symposium on 'Opportunities, Challenges and Trends in Navigational
+                            Technologies'</td>
+                        <td class="string">GNSS</td>
+                        <td class="string">2017</td>
+                        <td class="string">5th September 2017 SC/66</td>
+                    </tr>
+                    <tr>
+                        <td class="number">21</td>
+                        <td class="string">5-Day Short Course on 'GNSS Signal Processing'</td>
+                        <td class="string">GNSS</td>
+                        <td class="string">2016</td>
+                        <td class="string">13-17, DECEMBER 2016 SC/65</td>
+                    </tr>
+                    <tr>
+                        <td class="number">22</td>
+                        <td class="string">5-Day course on 'GNSS Technologies and Applications'</td>
+                        <td class="string">GNSS</td>
+                        <td class="string">2016</td>
+                        <td class="string">07-12, December 2016 SC/64B</td>
+                    </tr>
+                    <tr>
+                        <td class="number">23</td>
+                        <td class="string">Five-Day Intensive Course on Radar Signal Processing (RSP-16)</td>
+                        <td class="string">RSP</td>
+                        <td class="string">2016</td>
+                        <td class="string">25-29, JULY 2016 SC/64A</td>
+                    </tr>
+                    <tr>
+                        <td class="number">24</td>
+                        <td class="string">***********</td>
+                        <td class="string">*</td>
+                        <td class="string">****</td>
+                        <td class="string">SC/62</td>
+                    </tr>
+                    <tr>
+                        <td class="number">25</td>
+                        <td class="string">4 Day Short Course on GNSS Signals, Receiver Algorithms and Applications</td>
+                        <td class="string">GNSS</td>
+                        <td class="string">2015</td>
+                        <td class="string">16-19 Dec 2015 SC/61</td>
+                    </tr>
+                    <tr>
+                        <td class="number">26</td>
+                        <td class="string">An Evening School on Automatic Speech Recognition and Synthesis (ASR-15)</td>
+                        <td class="string">SSP</td>
+                        <td class="string">2015</td>
+                        <td class="string">4th August - 20th Nov 2015 SC/60</td>
+                    </tr>
+                    <tr>
+                        <td class="number">27</td>
+                        <td class="string">An Evening School on Image Processing</td>
+                        <td class="string">IP</td>
+                        <td class="string">2015</td>
+                        <td class="string">4th August - 20th Nov 2015 SC/59</td>
+                    </tr>
+                    <tr>
+                        <td class="number">28</td>
+                        <td class="string">A Two Day workshop on Sparse Signal Processing and Compressive Sensing</td>
+                        <td class="string"></td>
+                        <td class="string">2014</td>
+                        <td class="string">19-20 Dec 2014 SC/58</td>
+                    </tr>
+                    <tr>
+                        <td class="number">29</td>
+                        <td class="string">Five Day Workshop on GNSS Signals and Receive Algorithms</td>
+                        <td class="string">GNSS</td>
+                        <td class="string">2014</td>
+                        <td class="string">5-9 Aug 2014 SC/57</td>
+                    </tr>
+                    <tr>
+                        <td class="number">30</td>
+                        <td class="string">Ten Day Workshop on Automatic Speech Recognition and Synthesis</td>
+                        <td class="string">SSP</td>
+                        <td class="string">2014</td>
+                        <td class="string">13-22 July 2014 SC/56</td>
+                    </tr>
+                    <tr>
+                        <td class="number">31</td>
+                        <td class="string">A Two Day Workshop on Modern Navigation</td>
+                        <td class="string"></td>
+                        <td class="string">2013</td>
+                        <td class="string">29-30 Nov 2013 SC/55</td>
+                    </tr>
+                    <tr>
+                        <td class="number">32</td>
+                        <td class="string">A Five Day Modular Course on Hemispherical Resonator Gyroscope (HRG)</td>
+                        <td class="string"></td>
+                        <td class="string">2012</td>
+                        <td class="string">26-30 Nov 2012 SC/54</td>
+                    </tr>
+                    <tr>
+                        <td class="number">33</td>
+                        <td class="string">A Five Day Workshop on Automatic Speech Recognition</td>
+                        <td class="string">SSP</td>
+                        <td class="string">2012</td>
+                        <td class="string">7-11 Nov 2012 SC/53</td>
+                    </tr>
+                    <tr>
+                        <td class="number">34</td>
+                        <td class="string">Pearl Jubilee International Conference on Navigation and Communication
+                            (NAVCOM-2012)
+                        </td>
+                        <td class="string"></td>
+                        <td class="string">2012</td>
+                        <td class="string">20-21 Dec 2012 SC/52</td>
+                    </tr>
+                    <tr>
+                        <td class="number">35</td>
+                        <td class="string">A three week SERC School on Atmospheric effects on GPS AIDED Geo Augmented
+                            Navigation(GAGAN)</td>
+                        <td class="undefined"></td>
+                        <td class="string">2007</td>
+                        <td class="string">14th Nov – 4th Dec 2007 SC/35</td>
+                    </tr>
+                    <tr>
+                        <td class="number">36</td>
+                        <td class="string">Silver Jubilee National Conference on Global Navigation Satellite System and
+                            its
+                            Applications</td>
+                        <td class="undefined"></td>
+                        <td class="string">2007</td>
+                        <td class="string">25-26 October 2007 SC/36</td>
+                    </tr>
+                    <tr>
+                        <td class="number">37</td>
+                        <td class="string">Silver Jubilee Seminar on Future GPS and its Issues</td>
+                        <td class="undefined"></td>
+                        <td class="string">2007</td>
+                        <td class="string">7th September 2007 SC/37</td>
+                    </tr>
+                    <tr>
+                        <td class="number">38</td>
+                        <td class="string">A three day Intensive course on Global Navigation Satellite Systems</td>
+                        <td class="undefined"></td>
+                        <td class="string">2006</td>
+                        <td class="string">15-17 Nov 2006 SC/38</td>
+                    </tr>
+                    <tr>
+                        <td class="number">39</td>
+                        <td class="string">A three week SERC School on GPS Augmentation system and Atmospheric
+                            Corrections
+                        </td>
+                        <td class="undefined"></td>
+                        <td class="string">2005</td>
+                        <td class="string">23rd Nov -13th Dec 2005 SC/39</td>
+                    </tr>
+                    <tr>
+                        <td class="number">40</td>
+                        <td class="string">A three week SERC School on Basics of GPS and Ionosphere</td>
+                        <td class="undefined"></td>
+                        <td class="string">2004</td>
+                        <td class="string">4-24 Aug 2004 SC/40</td>
+                    </tr>
+                    <tr>
+                        <td class="number">41</td>
+                        <td class="string">Three Week SERC School on Atmospheric effects on GPS and Local area
+                            Augmentation
+                            systems(LAAS)</td>
+                        <td class="undefined"></td>
+                        <td class="string">2009</td>
+                        <td class="string">17th June-7th July 2009 SC/41</td>
+                    </tr>
+                    <tr>
+                        <td class="number">42</td>
+                        <td class="string">An Evening School on Probability Theory and Stochastic Processes</td>
+                        <td class="string">PTSP</td>
+                        <td class="string">2009</td>
+                        <td class="string">2nd Feb – 13th March 2009 SC/42</td>
+                    </tr>
+                    <tr>
+                        <td class="number">43</td>
+                        <td class="string">Finishing School on Real Time Signal Processing (RTSP-09)</td>
+                        <td class="string">RTSP</td>
+                        <td class="string">2009</td>
+                        <td class="string">25th June – 8th July 2009 SC/43</td>
+                    </tr>
+                    <tr>
+                        <td class="number">44</td>
+                        <td class="string">A Three Day course on Automatic Speech Recognition</td>
+                        <td class="string">SSP</td>
+                        <td class="string">2009</td>
+                        <td class="string">27-29 Aug 2009 SC/44</td>
+                    </tr>
+                    <tr>
+                        <td class="number">45</td>
+                        <td class="string">Short Course on Real Time Signal Processing</td>
+                        <td class="string">RTSP</td>
+                        <td class="string">2010</td>
+                        <td class="string">22-26 June 2010 SC/45</td>
+                    </tr>
+                    <tr>
+                        <td class="number">46</td>
+                        <td class="string">Short Term course on Automatic Speech Recognition</td>
+                        <td class="string">SSP</td>
+                        <td class="string">2010</td>
+                        <td class="string">6-9 Sept. 2010 SC/46</td>
+                    </tr>
+                    <tr>
+                        <td class="number">47</td>
+                        <td class="string">Four Day Intensive Course on Overview of GNSS and its Applications</td>
+                        <td class="undefined"></td>
+                        <td class="string">2010</td>
+                        <td class="string">9-12 Nov 2010 SC/47</td>
+                    </tr>
+                    <tr>
+                        <td class="number">48</td>
+                        <td class="string">A One Day Workshop on Modernization Aspects of GNSS and its Applications</td>
+                        <td class="undefined"></td>
+                        <td class="string">2011</td>
+                        <td class="string">17th Dec 2011 SC/48</td>
+                    </tr>
+                    <tr>
+                        <td class="number">49</td>
+                        <td class="string">A Three Week DST Sponsored SERC School on GPS Applications and Atmospheric
+                            Constraints</td>
+                        <td class="undefined"></td>
+                        <td class="string">2012</td>
+                        <td class="string">13th June – 3rd July 2012 SC/49</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $('#myTable').dataTable();
+            });
+        </script>
+        <script>
+            function sortTable(n) {
+                var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+                table = document.getElementById("myTable");
+                switching = true;
+                dir = "asc";
+                while (switching) {
+                    switching = false;
+                    rows = table.rows;
+
+                    for (i = 1; i < (rows.length - 1); i++) {
+                        shouldSwitch = false;
+                        x = rows[i].getElementsByTagName("TD")[n];
+                        y = rows[i + 1].getElementsByTagName("TD")[n];
+
+                        if (dir == "asc") {
+                            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        } else if (dir == "desc") {
+                            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                    }
+                    if (shouldSwitch) {
+                        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                        switching = true;
+                        switchcount++;
+                    } else {
+                        if (switchcount == 0 && dir == "asc") {
+                            dir = "desc";
+                            switching = true;
+                        }
+                    }
+                }
+            }
+        </script>
+</body>
+
+</html>

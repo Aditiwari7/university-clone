@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>HTML Tutorial</title>
+    <title>NERTU</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -12,68 +12,41 @@
 
 <body>
     <div>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
-                <!-- <img src="assets/nertulogo.jpeg" style="height: 50px; padding-right: 5px;"/> -->
-                <span class="navbar-text" style="font-weight:800; font:25px sans-serif;"><img src="assets/nertulogo.jpeg" style="height: 40px; padding-right: 5px;"/>NERTU</span>
-            </div>
-            <div class="container-fluid" style="margin: -40%;">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home"><i class="fa-solid fa-house"></i> Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-image"></i> Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-window-restore"></i> Workshop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-address-book"></i> Project</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-file-lines"></i> Publication</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-clipboard-user"></i> Staff</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-download"></i> Download</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-address-book"></i> Contact Us</a>
-                    </li>
-                </ul>
+                <span class="navbar-brand mx-5" style="font:25px sans-serif;"><img src="assets/nertulogo.jpeg"
+                        class="img-rounded" style="height: 30px; padding-right: 5px; margin-top: -5pt;" />NERTU</span>
+                <button type="button" class="navbar-toggler mx-5" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse mx-5 justify-content-end" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="/home.html" class="nav-item nav-link"><i class="fa-solid fa-house"></i> Home</a>
+                        <a href="/gallery.html" class="nav-item nav-link"><i class="fa-solid fa-image"></i> Gallery</a>
+                        <a href="/workshop.html" class="nav-item nav-link"><i class="fa-solid fa-window-restore"></i> Workshop</a>
+                        <a href="/project.html" class="nav-item nav-link"><i class="fa-solid fa-address-book"></i> Project</a>
+                        <a href="/publication.html" class="nav-item nav-link"><i class="fa-solid fa-file-lines"></i> Publication</a>
+                        <a href="/staff.html" class="nav-item nav-link"><i class="fa-solid fa-clipboard-user"></i> Staff</a>
+                        <a href="###" class="nav-item nav-link"><i class="fa-solid fa-download"></i> Download</a>
+                        <a href="/contact.html" class="nav-item nav-link"><i class="fa-solid fa-address-book"></i> Contact Us</a>
+                    </div>
+                </div>
             </div>
         </nav>
     </div>
-    <div class="container-fluid" style="margin-top:20px">
+    <div class="container-fluid">
 
         <div>
-            <img src="assets/pic11.jpg" style="margin:-10.5px; width:101.57%;" />
+            <img src="assets/pic11.jpg" class="img-fluid pt-3" />
         </div>
-        <div class="m-5">
-            <div>
-                <section id="yt_spotlight5" class="block" style="-webkit-text-size-adjust: 100%;
-            -webkit-tap-highlight-color: rgba(0,0,0,0);
-            line-height: 20px;
-            background-color: rgb(96, 2, 2);
-            color: #333;
-            margin-inline: -52.5px;
-            margin-top: -35px;
-            padding-bottom: 10px;
-            font-size: 13px;
-            font-family: Ubuntu;
-            box-sizing: border-box;
-            display: block;
-            position: relative;
-            z-index: 1;">
+        <div class="mx-5">
+            <div class="bg-warning bg-gradient p-2" style="margin-inline: -52.5px;">
+                <section>
                     <div class="container">
-                        <div
-                            style="display: inline-block; padding-right: 100px; width: 100%; height: 26px; overflow: hidden;">
+                        <div>
                             <div id="top3">
-                                <marquee
-                                    style="overflow: hidden; position:absolute; visibility: visible; white-space:nowrap; top:10px;">
+                                <marquee>
                                     <a href="Student attendance.docx"><b>Student attendance </b></a>&nbsp; &nbsp;
                                     <a href="https://online.osmaniaerp.com/CV"><img src="assets/newgif.jpg"
                                             alt="newgif.jpg" title=""
@@ -143,16 +116,16 @@
                 </section>
             </div>
             <div>
-                <h1 class="text-center text-info" style="font-weight:800; font:55px sans-serif; padding: 40px;">Research &nbsp;
-                    And &nbsp; Training &nbsp; Unit &nbsp; For &nbsp; Navigational &nbsp; Electronics &nbsp; (NERTU)
+                <h1 class="text-center text-info fs-1 fw-bold my-5" style="font:55px sans-serif;">Research And Training
+                    Unit For Navigational Electronics <br />
+                    (NERTU)
                 </h1>
             </div>
 
             <div class="row pb-5 d-flex text-start">
-                <!-- <p class="mx-5 px-5 pb-5 d-flex text-start"> -->
-                <div class="col">
+                <div class="col-md-6 pe-5">
                     <h3 class="font-bold text-danger mt-2">About</h3>
-                    <div style="text-align:justify">
+                    <div style="text-align:justify; ">
                         Osmania University is a collegiate public state university located
                         in Hyderabad, Telangana, India. Mir Osman Ali Khan, the 7th Nizam of
                         Hyderabad, issued a firman calling for its creation on 29 August
@@ -174,8 +147,8 @@
                     </div>
                 </div>
 
-                <div class="col">
-                    <h3 class="font-bold text-danger mt-2 ms-2">History</h3>
+                <div class="col-md-6">
+                    <h3 class="font-bold text-danger mt-2">History</h3>
                     <div style="text-align:justify">In 1917, Sir Akbar Hydari, in a memorandum to the Education
                         Minister, emphasized the need to establish a university in Hyderabad
                         with Urdu as the medium of instruction, "as it is the language of
@@ -200,10 +173,13 @@
                 </div>
                 <!-- </p> -->
                 <div class="row text-start mt-5">
-                    <h3 class="font-bold mt-2 text-danger">Know About Director</h3>
-                    <div class="col-sm-3"><img src="assets/laxminarayana.jpg" class="rounded-circle"
-                            style="height:300px; width:275px;" /></div>
-                    <div class="col-sm-9">
+                    <!-- <h3 class="text-center font-bold mt-2 text-danger">Know About Director
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </h3> -->
+                    <div class="col-md-4"><img src="assets/laxminarayana.jpg" class="rounded-circle"
+                            style="height:400px; width:340px;" /></div>
+                    <div class="col-md-8">
+                        <h3 class="font-bold mt-2 text-danger">Know About Director</h3>
                         <h4 class="font-bold">Prof. P. Laxminarayana</h4>
                         <div style="text-align:justify">Dr. P. Laxminarayana (PLN) is the Professor and Director of
                             NERTU,
@@ -240,8 +216,9 @@
                     </div>
                 </div>
             </div>
-            <h2 class="font-bold text-danger mt-2 text-center">UpComming Workshops</h2><br />
-            <div class="d-inline-flex flex-row p-2">
+            <h2 class="font-bold text-danger mt-2 text-center">UpComming Workshops</h2>
+            <br/>
+            <div class="d-flex flex-row p-2">
                 <div class="card" style="width: 22rem; ">
                     <img className="product--image"
                         src='https://doonsrinagar.com/storage/images/events/608563d80b6ba.png' alt="img 1" />
