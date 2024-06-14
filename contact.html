@@ -13,7 +13,7 @@
 <body>
     <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top">
-            <div class="container-fluid mx-5">
+            <div class="container-fluid mx-3">
                 <a class="navbar-brand fw-bold" href="#"><img src="assets/nertulogo.jpeg"
                         style="height: 35px; padding-right: 5px; margin-top: -5pt;" />NERTU</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -21,8 +21,8 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse mx-3 fw-bolder" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 ms-lg-5 ps-lg-5 mb-lg-0">
+                <div class="collapse navbar-collapse  fw-bolder" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 ms-lg-5 mb-lg-0">
                         <li class="nav-item">
                             <a href="/index.html" class="nav-link" aria-current="page"><i class="fa-solid fa-house"></i>
                                 Home</a>
@@ -33,11 +33,11 @@
                         </li>
                         <li class="nav-item">
                             <a href="/project.html" class="nav-link"><i class="fa-solid fa-address-book"></i>
-                                Project</a>
+                                Projects</a>
                         </li>
                         <li class="nav-item">
                             <a href="/publication.html" class="nav-link"><i class="fa-solid fa-file-lines"></i>
-                                Publication</a>
+                                Publications</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -45,17 +45,30 @@
                                 <i class="fa-solid fa-tag"></i> Infrastructure
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#"> Labs</a></li>
-                                <li><a class="dropdown-item" href="#"> Equipment</a></li>
-                                <li><a class="dropdown-item" href="#"> Library</a></li>
+                                <li><a class="dropdown-item" href="./lab.html"> Labs / Equipment</a></li>
+                                <li><a class="dropdown-item" href="./library.html"> Library</a></li>
+                                <li><a class="dropdown-item" href="./auditorium.html"> Auditorium</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-clipboard-user"></i> Staff
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="./scientificStaff.html"> Scientific Staff</a></li>
+                                <li><a class="dropdown-item" href="./technicalStaff.html"> Technical Staff</a></li>
+                                <li><a class="dropdown-item" href="./administrativeStaff.html"> Administrative Staff</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/staff.html"><i class="fa-solid fa-clipboard-user"></i>
-                                Staff</a>
+                            <a href="/students.html" class="nav-link px text-muted"><i
+                                    class="fa-solid fa-clipboard-user"></i> Students</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#Opportunities" class="nav-link"><i class="fa-solid fa-lightbulb"></i>
+                            <a href="./opportunities.html" class="nav-link px text-muted"><i
+                                    class="fa-solid fa-lightbulb"></i>
                                 Opportunities</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -64,8 +77,8 @@
                                 <i class="fa-solid fa-download"></i> Resources
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#"> Open Source Code</a></li>
-                                <li><a class="dropdown-item" href="#"> Datasets</a></li>
+                                <li><a class="dropdown-item" href="./assets/NavIC/"> Open Source Code</a></li>
+                                <li><a class="dropdown-item" href="./assets/NavIC_DataSets/"> Datasets</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -82,37 +95,39 @@
 
         <div id="workshop" class="mt-5 pt-2">
             <h1 class="text-center font-bold text-danger py-5" style="font-size: 40px">
-                Contact Details
+                CONTACT DETAILS
             </h1>
             <!-- <h1>Dr.P.Laxminarayana</h1> -->
             <div class="fs-4">
                 <div class="text-center">
-                    <h1 class="p-2">Dr.P.Laxminarayana</h1>
-                    Principal Scientist/Professor and Director,
-                    <br /> Research and Training Unit for Navigational Electronics
-                    (NERTU),
-                    <br /> Osmania University
-                    <br /> Hyderabad 500 007
-                    <br />
-                    <h3>INDIA</h3>
-                    <br />
+                    <div class="fw-bold" style="color: rgb(225, 150, 50);">
+                        <h1 class="fw-bold p-2 text-primary">Dr. Laxminarayana Parayitam</h1>
+                        Professor and Director,
+                        <br /> Research and Training Unit for Navigational Electronics
+                        (NERTU),
+                        <br /> Osmania University
+                        <br /> Hyderabad 500 007
+                        <br />
+                        <h2 class="text-primary fw-bolder">INDIA</h2>
+                        <br />
+                    </div>
                 </div>
                 <div class="row align-center">
                     <div class="col-3"></div>
-                    <div class="col-3 mx-5">
-                        <h3 class="text-left">Phone Number :</h3>
-                        +91 (40) 23157787 (R)
-                        <br />
+                    <div class="col-3 fw-bold" style="color: rgb(225, 150, 50);">
+                        <h3 class="text-left text-dark">Phone Number :</h3>
                         +91 (40) 27098066 (O)
                         <br />
                         +91 949 080 5486 (M)
+                        <br />
+                        +91 (40) 23157787 (R)
                     </div>
 
-                    <div class="col-3 mx-5">
-                        <h3 class="text-left">Email Address :</h3>
-                        laxminarayana@osmania.ac.in
-                        <br />
+                    <div class="col-3 mx-5 fw-bold" style="color: rgb(225, 150, 50);">
+                        <h3 class="text-left text-dark">Email Address :</h3>
                         director.nertu@osmania.ac.in
+                        <br />
+                        laxminarayana@osmania.ac.in
                         <br />
                         plaxminarayana@yahoo.com
                     </div>
@@ -122,8 +137,9 @@
         </div>
     </div>
 </body>
+
 <footer class="py-3 mt-4 bg-info">
-    <ul class="nav justify-content-center fw-bold border-bottom pb-3 mb-3">
+    <ul class="nav justify-content-center fw-bolder border-bottom pb-3 mb-3">
         <li class="nav-item">
             <a href="/index.html" class="nav-link px text-muted"><i class="fa-solid fa-house"></i> Home</a>
         </li>
@@ -133,27 +149,36 @@
         </li>
         <li class="nav-item">
             <a href="/project.html" class="nav-link px text-muted"><i class="fa-solid fa-address-book"></i>
-                Project</a>
+                Projects</a>
         </li>
         <li class="nav-item">
             <a href="/publication.html" class="nav-link px text-muted"><i class="fa-solid fa-file-lines"></i>
-                Publication</a>
+                Publications</a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link px text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
                     class="fa-solid fa-tag"></i> Infrastructure</a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#"> Labs</a></li>
-                <li><a class="dropdown-item" href="#"> Equipment</a></li>
-                <li><a class="dropdown-item" href="#"> Library</a></li>
+                <li><a class="dropdown-item" href="./lab.html"> Lab / Equipment</a></li>
+                <li><a class="dropdown-item" href="./library.html"> Library</a></li>
+                <li><a class="dropdown-item" href="./auditorium.html"> Auditorium</a></li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link px text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+                    class="fa-solid fa-tag"></i> Staff</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./scientificStaff.html"> Scientific Staff</a></li>
+                <li><a class="dropdown-item" href="./technicalStaff.html"> Technical Staff</a></li>
+                <li><a class="dropdown-item" href="./administrativeStaff.html"> Administrative Staff</a></li>
             </ul>
         </li>
         <li class="nav-item">
-            <a href="/staff.html" class="nav-link px text-muted"><i class="fa-solid fa-clipboard-user"></i>
-                Staff</a>
+            <a href="/students.html" class="nav-link px text-muted"><i class="fa-solid fa-clipboard-user"></i>
+                Students</a>
         </li>
         <li class="nav-item">
-            <a href="#opportunities" class="nav-link px text-muted"><i class="fa-solid fa-lightbulb"></i>
+            <a href="./opportunities.html" class="nav-link px text-muted"><i class="fa-solid fa-lightbulb"></i>
                 Opportunities</a>
         </li>
         <li class="nav-item dropdown">
@@ -162,8 +187,8 @@
                 Resources
             </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Open Source Codes</a></li>
-                <li><a class="dropdown-item" href="#">Datasets</a></li>
+                <li><a class="dropdown-item" href="./assets/NavIC/">Open Source Codes</a></li>
+                <li><a class="dropdown-item" href="./assets/NavIC_DataSets/">Datasets</a></li>
             </ul>
         </li>
         <li class="nav-item">
@@ -175,7 +200,7 @@
                 Contact Us</a>
         </li>
     </ul>
-    <p class="text-center fw-bold fs-4 text-muted">Research And Training Unit For Navigational Electronics (NERTU),
+    <p class="text-center fw-bold fs-4 text-muted">Research and Training Unit for Navigational Electronics (NERTU),
         Osmania University, Hyderabad, INDIA</p>
 </footer>
 

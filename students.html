@@ -1,0 +1,2826 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NERTU</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.dataTables.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top">
+        <div class="container-fluid mx-3">
+            <a class="navbar-brand fw-bold" href="#"><img src="assets/nertulogo.jpeg"
+                    style="height: 35px; padding-right: 5px; margin-top: -5pt;" />NERTU</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse  fw-bolder" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 ms-lg-5 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="/index.html" class="nav-link" aria-current="page"><i class="fa-solid fa-house"></i>
+                            Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/workshop.html" class="nav-link"><i class="fa-solid fa-window-restore"></i>
+                            Courses/Workshops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/project.html" class="nav-link"><i class="fa-solid fa-address-book"></i>
+                            Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/publication.html" class="nav-link"><i class="fa-solid fa-file-lines"></i>
+                            Publications</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-tag"></i> Infrastructure
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./lab.html"> Labs / Equipment</a></li>
+                            <li><a class="dropdown-item" href="./library.html"> Library</a></li>
+                            <li><a class="dropdown-item" href="./auditorium.html"> Auditorium</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-clipboard-user"></i> Staff
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./scientificStaff.html"> Scientific Staff</a></li>
+                            <li><a class="dropdown-item" href="./technicalStaff.html"> Technical Staff</a></li>
+                            <li><a class="dropdown-item" href="./administrativeStaff.html"> Administrative Staff</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/students.html" class="nav-link px text-muted"><i
+                                class="fa-solid fa-clipboard-user"></i> Students</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./opportunities.html" class="nav-link px text-muted"><i class="fa-solid fa-lightbulb"></i>
+                            Opportunities</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-download"></i> Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./assets/NavIC/"> Open Source Code</a></li>
+                            <li><a class="dropdown-item" href="./assets/NavIC_DataSets/"> Datasets</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/gallery.html" class="nav-link"><i class="fa-solid fa-image"></i> Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact.html" class="nav-link"><i class="fa-solid fa-address-book"></i> Contact
+                            Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="stu-label" class="mt-5 pt-2">
+        <h1 class="text-center font-bold text-danger py-5" style="font-size: 40px">
+            STUDENTS
+        </h1>
+        <div class="m-5">
+            <table id="myTable" class="table table-striped table-bordered border-dark">
+                <thead>
+                    <tr>
+                        <th class="number text-center" onclick="sortTable(0)">S.No</th>
+                        <th class="number text-center" onclick="sortTable(1)">Year of completion</th>
+                        <th class="string text-center" onclick="sortTable(2)">PG/PHD</th>
+                        <th class="string text-center" onclick="sortTable(3)">Student Name</th>
+                        <th class="string text-center" onclick="sortTable(4)">Mail</th>
+                        <th class="string text-center" onclick="sortTable(5)">Title</th>
+                        <th class="string text-center" onclick="sortTable(6)">Guide</th>
+                        <th class="string text-center" onclick="sortTable(7)">Internal Guide/Co-Guide</th>
+                        <th class="string text-center" onclick="sortTable(8)">Area</th>
+                        <th class="string text-center" onclick="sortTable(9)">College/University</th>
+                        <th class="string text-center" onclick="sortTable(10)">Presently Working At</th>
+                        <th class="string text-center" onclick="sortTable(11)">Thesis Link</th>
+                        <th class="string text-center" onclick="sortTable(12)">Personal WebPage Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="number text-center">1</td>
+                        <td class="number text-center">1984</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">K.Nayanatara</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Elecromagnetic Scattering by Conducting Cylinders of Arbitary Cross-Section
+                        </td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">2</td>
+                        <td class="number text-center">1984</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Rajendra Kumar</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Least-squares Design of FIR and IIR Filters</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">3</td>
+                        <td class="number text-center">1985</td>
+                        <td class="string">PHD</td>
+                        <td class="string">K.Veerabhadra Rao</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">New Results on Generation of Low Side-Lobe Biphase Sequence,Hadamard
+                            Matrices, and Constant Minimum-Distance
+                            codes</td>
+                        <td class="string">Dr.U V Reddy</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">4</td>
+                        <td class="number text-center">1985</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">A.Anuradha</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Synthesis and Design of Array Antennas for
+                            Microwave Landing System</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">5</td>
+                        <td class="number text-center">1986</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">B.Harikumar</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Pattern shaping in the Non-Scanned Plane
+                            for MLS-Multupath Effects</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">6</td>
+                        <td class="number text-center">1986</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Sharmla Mathur</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Study of Kalman Filter and its Application
+                            to Collision Avoidance Systems</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">7</td>
+                        <td class="number text-center">1987</td>
+                        <td class="string">PHD</td>
+                        <td class="string">Y.Yoganandam</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Studies on Spectrum and bearing Estimation Algorithms</td>
+                        <td class="string">Dr.U V Reddy</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">8</td>
+                        <td class="number text-center">1990</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">V.Hari Krishna</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Design of Adaptive filters for non uniformly
+                            sampled signals</td>
+                        <td class="string">Dr.D.C.Reddy</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">9</td>
+                        <td class="number text-center">1991</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">K.L.N.Rao</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Application of Physical Theory of Diffraction
+                            to Terrain Modeling and Radar Cross Section</td>
+                        <td class="string">Dr.S.Ananda Mohan</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">10</td>
+                        <td class="number text-center">1991</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Ch.Anjaneyulu</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Software Development for Air Traffic Control</td>
+                        <td class="string">Dr.Y.Yoganandam</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">11</td>
+                        <td class="number text-center">1991</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">G.V.Dharma Rao</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Studies on Some CFAR Techniques</td>
+                        <td class="string">Dr.Y.Yoganandam</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">12</td>
+                        <td class="number text-center">1992</td>
+                        <td class="string">PHD</td>
+                        <td class="string">K.Deergha Rao</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string"></td>
+                        <td class="string">Dr.D.C.Reddy</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">13</td>
+                        <td class="number text-center">1992</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">C.Uma</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Effect of Spatial Smoothing on the performance of Subspace Methods in the
+                            presence of Array Model Errors</td>
+                        <td class="string">Dr.K.V.S.Hari</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">14</td>
+                        <td class="number text-center">1992</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">A.N.Rajagopalan</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">System of Synthetic Aperture Radar Technique for Radar Imaging</td>
+                        <td class="string">Dr.K.V.S.Hari</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">15</td>
+                        <td class="number text-center">1992</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">K.Raja Reddy</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Analysis of Arbitrary Wire Antennas by Method of Moments</td>
+                        <td class="string">Dr.S.Ananda Mohan</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">16</td>
+                        <td class="number text-center">1993</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Sameer W. Shendre</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Atmospheric effects on 94 Ghz MMW Radar</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">17</td>
+                        <td class="number text-center">1993</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Jitendra A. Dhawas</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Pattern shaping in the Non-Scanned Plane
+                            for MLS-Multupath Effects</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">18</td>
+                        <td class="number text-center">1994</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">P.Laxminarayana</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string"></td>
+                        <td class="string">Prof.D.C.Reedy</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">19</td>
+                        <td class="number text-center">1994</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">B.Srinivas Reddy</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Ridge Regression-Based Kalman Filtering for
+                            GPS navigation Solution</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">20</td>
+                        <td class="number text-center">1998</td>
+                        <td class="string">PHD</td>
+                        <td class="string">Sivannarayana</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string"></td>
+                        <td class="string">Dr.D.C.Reddy</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">21</td>
+                        <td class="number text-center">1999</td>
+                        <td class="string">PHD</td>
+                        <td class="string">Shamla Mathur</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string"></td>
+                        <td class="string">Dr.D.C.Reddy</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">22</td>
+                        <td class="number text-center">1999</td>
+                        <td class="string">PHD</td>
+                        <td class="string">K.V.Satchidananda Babu</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Studies on Adaptive Estimation of
+                            Eigensubspace and Angle tracking </td>
+                        <td class="string">Dr.Y.Yoganandam</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">23</td>
+                        <td class="number text-center">1999</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">V.Venkata Rao</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">SCORE Algorithm for Improving GPS Position
+                            Accuracy</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">24</td>
+                        <td class="number text-center">2000</td>
+                        <td class="string">PHD</td>
+                        <td class="string">P.LaxmiNarayana</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Application of ANNs and Fuzzy Logic:Case
+                            Studies in Medical Diagnostics, Missing Data Recovery and Nonlinear Dynamical Systems</td>
+                        <td class="string">Dr.D.C.Reddy</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">25</td>
+                        <td class="number text-center">2000</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">S.Yugandhar</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Simulation of Dense Scatterer Mobile
+                            Environment for DSPN Satellite Reception</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">26</td>
+                        <td class="number text-center">2000</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Pradeep kumar Srivastava</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">An Evalution of Satellite Link Availability using Probability Density
+                            Function</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">27</td>
+                        <td class="number text-center">2001</td>
+                        <td class="string">PHD</td>
+                        <td class="string">M.V.Krishna Rao</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Biomedical Image Segmentation a Wavelet
+                            Transform Approach</td>
+                        <td class="string">Dr.D.C.Reddy</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">28</td>
+                        <td class="number text-center">2001</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">K.Hari Narayana </td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Statistical Analysis of Satellite Signals in the
+                            Context of Mobile Communications</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">29</td>
+                        <td class="number text-center">2002</td>
+                        <td class="string">PHD</td>
+                        <td class="string">N.S.Murthy Sarma</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Radiation Pattern Analysis of Microwave
+                            Antennas Mounted on A Rocket Shaped
+                            Structure Using Wedge Diffraction Theory</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">30</td>
+                        <td class="number text-center">2002</td>
+                        <td class="string">PHD</td>
+                        <td class="string">Madhavilata</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Wavelet Transforms and their applications to various types of signals</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">IP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">31</td>
+                        <td class="number text-center">2002</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">HariKrishna</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">RLS Based Predictor for Latency Compensation in WAAS</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">GNSS</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">32</td>
+                        <td class="number text-center">2002</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">B.Sridhar</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Statistical Simulation of Signal Envelop For
+                            Satellite Land Mobile Communication Channel</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">33</td>
+                        <td class="number text-center">2003</td>
+                        <td class="string">PHD</td>
+                        <td class="string">K.Ravindra</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Modelling of path loss and Characterization
+                            of mobile communication channels</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">34</td>
+                        <td class="number text-center">2003</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Jyothisheela</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Loosely coupled INS/GPS Integration Using Kalman filter </td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">35</td>
+                        <td class="number text-center">2003</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">D.Venkata Ratnam</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Datum transformations for GPS Applications</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">36</td>
+                        <td class="number text-center">2003</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">B.Shiva Kumar</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Statistical analysis of time delay of GPS
+                            signals</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">37</td>
+                        <td class="number text-center">2004</td>
+                        <td class="string">PHD</td>
+                        <td class="string">G.Sasi Bhushana Rao</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Ionospheric error analysis for Indian WAAS
+                            references station placement </td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">38</td>
+                        <td class="number text-center">2004</td>
+                        <td class="string">PHD</td>
+                        <td class="string">T.Madhu</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Analysis and Modelling of Ionnospheric time delay for navigation in india
+                        </td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">39</td>
+                        <td class="number text-center">2004</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Mallikarjun</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Psychoacoustic Modeling for MPEG-1,layer3 Audio Encoding and Implementation
+                            of MDCT on Blackfin Processor</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">40</td>
+                        <td class="number text-center">2004</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Sri Devi</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Psychoacoustic and TNS Models for AAC-LC Encoder and Implementation of MDCT
+                            on Blackfin Processor</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">41</td>
+                        <td class="number text-center">2004</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">K.Chandra Kiran</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Development od grid based planer fit model
+                            for Indian WAAS</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">42</td>
+                        <td class="number text-center">2004</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">C.Vardhan Adusumalli</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">A Kalman filter approach to estimate TEC and instrumental biases from GPS
+                            Observables</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">43</td>
+                        <td class="number text-center">2004</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">K.V.N.M.Prasad</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Analysis of Aircraft bearing due to DVOR and
+                            ILS at Hyderabad airport</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">44</td>
+                        <td class="number text-center">2004</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">G.Raja Shekhar </td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Performance analysis of impulse noise and
+                            multiplicative noise image restoration
+                            algorithm</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">45</td>
+                        <td class="number text-center">2004</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">K.Sudha kalyan</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Robust chaotic image transmission and
+                            reception </td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">46</td>
+                        <td class="number text-center">2004</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">M.L.Narasimham</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Spectral analysis of genomic sequences</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">47</td>
+                        <td class="number text-center">2005</td>
+                        <td class="string">PHD</td>
+                        <td class="string">Arjun Singh</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string"></td>
+                        <td class="string">Dr.D.C.Reddy</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">48</td>
+                        <td class="number text-center">2005</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Venugopal</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">MPEG-2 AAC LC Encoder Efficient Implementation and Integration of MDCT and
+                            Perceptual Model</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">49</td>
+                        <td class="number text-center">2005</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Venkatesh</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">MPEG-2 AAC LC Encoder Efficient Implementation and Integration of TNS M/S
+                            Stereo and Huffmann coding</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">50</td>
+                        <td class="number text-center">2005</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">P.S.Ravikanth </td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Integration of GPS and Cellular
+                            Communication for Wireless Position Data
+                            Transfer applications</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">51</td>
+                        <td class="number text-center">2005</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">S.Ghouse Mohideen</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Modelling GPS Ionospheric Time delay
+                            variations using planar Fit Method with
+                            Adaptable Decorrelation function for GAGAN</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">52</td>
+                        <td class="number text-center">2005</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">N.Ajith</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Design of Dual Frequency GPS Receiver
+                            Antenna</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">53</td>
+                        <td class="number text-center">2005</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">T.Ravi Kishore</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Adaptive Blind Equalization of single Input
+                            Multi Output Channels</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">54</td>
+                        <td class="number text-center">2005</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">T.S.N.Murthy</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Multi-User Detection Techniques in
+                            Non-Gaussian Channels _A Comparative
+                            Analysis</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">55</td>
+                        <td class="number text-center">2006</td>
+                        <td class="string">PHD</td>
+                        <td class="string">K.Ramalingam</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Precise estimation of satellite and receiver
+                            instrumental Biases for GAGAN </td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">56</td>
+                        <td class="number text-center">2006</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Santosh</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">MPEG-2 AAC LC Encoder Fixed Point Implementation and Integration of
+                            Psychoacoustic Model</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">57</td>
+                        <td class="number text-center">2006</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Mr.V.Kotesh Sharma</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Location Based Mobile Emergency Services</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">58</td>
+                        <td class="number text-center">2006</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Ch,Padmaja</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Image Coding Techniques-A Comparative
+                            Analysis</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">59</td>
+                        <td class="number text-center">2007</td>
+                        <td class="string">PHD</td>
+                        <td class="string">Y.Ravi Kumar</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Investigation of Experimental and Ststistical
+                            Modelling Results of VHF to X-Band Signals
+                            for Mobile Communication Applications</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">60</td>
+                        <td class="number text-center">2007</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Sunitha</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Acquisition and tracking Algorithms of a GPS receiver</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">61</td>
+                        <td class="number text-center">2007</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">N.Sunanda</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Determination of mobile position using RSS
+                            measurements </td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">62</td>
+                        <td class="number text-center">2007</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">S.Swapna Rani </td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Least Squares adjustment techniques for
+                            estimation of TEC and instrumental biases
+                            from GPS data</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">63</td>
+                        <td class="number text-center">2007</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Ch.Sreenivas</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Application of Hatch and Kalman filters for
+                            estimation of GPS ionospheric time delay</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">64</td>
+                        <td class="number text-center">2007</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">V.Satya Srinivas </td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Effect of cycle slip on GPS Performance </td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">65</td>
+                        <td class="number text-center">2007</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Syed Shameem</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Secure data transmission over wireless
+                            channels</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">66</td>
+                        <td class="number text-center">2008</td>
+                        <td class="string">PHD</td>
+                        <td class="string">D.Krishna Reddy</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Investigation of Various Position Fixing
+                            Techniques for Mobile Communication
+                            Applications</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">67</td>
+                        <td class="number text-center">2008</td>
+                        <td class="string">PHD</td>
+                        <td class="string">B.Rama Krishna Rao</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Mitigation of Multipath Effects in High
+                            Performance Radio Receivers using Antenna Modelling Techniques</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">68</td>
+                        <td class="number text-center">2008</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Sri Vidya</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Implementation of Real Time Data Acquisition of Speech Signal on Blackfin
+                            Processor for ASR</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">RTSP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">69</td>
+                        <td class="number text-center">2008</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Bharath</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Real Time Implementation of Extraction of MEL-Cepstrum of Speech Signal Using
+                            Matlab</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">RTSP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">70</td>
+                        <td class="number text-center">2008</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">A.Ushasri</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Effect of Location on Physiological
+                            parameters</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">71</td>
+                        <td class="number text-center">2008</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Santhosh</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Estimation of Ionospheric Grid Point Delay
+                            for GAGAN Applications </td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">72</td>
+                        <td class="number text-center">2008</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">P.Satyanarayana</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Estimation of Ionospheric Gradient Using GPS Data</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">73</td>
+                        <td class="number text-center">2008</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Raj Kumar</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Comparative study of Ionospheric Time
+                            Delay due to IRI-2007 Model and GAGAN
+                            system</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">74</td>
+                        <td class="number text-center">2008</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">T.Aravind Babu</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">
+                            Reai Time Embedded system for GPS Location Based Mobile Emergency services</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">75</td>
+                        <td class="number text-center">2008</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">M.Rajan </td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Design of Decoder for Navigation Data in
+                            GPS L5 Receiver</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">76</td>
+                        <td class="number text-center">2009</td>
+                        <td class="string">PHD</td>
+                        <td class="string">T.Anil Kumar</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">A New Robust Technique and its
+                            performance Analysis for Multiuser
+                            Detection in Non-Gaussian Channels</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">77</td>
+                        <td class="number text-center">2009</td>
+                        <td class="string">PHD</td>
+                        <td class="string">Niranjan Prasad</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Ionospheric Grid Models for GAGAN</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">78</td>
+                        <td class="number text-center">2009</td>
+                        <td class="string">PHD</td>
+                        <td class="string">Qudussa Sultana</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Investigation on Enhancement of DOP due
+                            to Augmentation of GNSS with Pseudolites</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">79</td>
+                        <td class="number text-center">2009</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Sujatha</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Implementation of MFCC Extraction on Blackfin Processor</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">80</td>
+                        <td class="number text-center">2009</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">M.Farheen Begum</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Performance Analysis of LRF-ike 305 using
+                            Single and Dual Frequency GPS Receivers</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">81</td>
+                        <td class="number text-center">2009</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Asadullah Baig</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Investigation of Vertical Protection Level for
+                            Low Latitude region</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">82</td>
+                        <td class="number text-center">2009</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">K.Rama Rao</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Time Delay Statistics of GPS Signals</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">83</td>
+                        <td class="number text-center">2009</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Ch.Sujatha</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Ionospheric Tomography Time Delay Model
+                            For GAGAN</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">84</td>
+                        <td class="number text-center">2009</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Ch.Sai Viswanadh</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Application of Kalman Filter in GPS and
+                            Bio-medical Signal Processing</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">85</td>
+                        <td class="number text-center">2009</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">D.Swaroopa Rani</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">TEC Estimation across Indian Region and its
+                            Comparision with IRI 2007</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">86</td>
+                        <td class="number text-center">2009</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">D.Kishore</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Investigation of Spectral Leakage to GPS Li
+                            Band from MB-OFDM Based UWB Signals</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">87</td>
+                        <td class="number text-center">2010</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Hari Prasad</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Implementation of Speech Segmentation for IWR using Blackfin Processor</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">88</td>
+                        <td class="number text-center">2010</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Alavenu</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Implementation of Frontend Processing for ASR on Blackfin Processor</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">89</td>
+                        <td class="number text-center">2010</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Alavelu Manga</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Implementation of HMM Based Forward Algorithm for Isolated Word Recognition
+                        </td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">90</td>
+                        <td class="number text-center">2010</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">K.C.T.Swamy</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Analysis of Ionospheric Time Delay of Micro
+                            Wave Signals for Navigation Applications</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">91</td>
+                        <td class="number text-center">2010</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">K.Sai Prasad</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Estimation of GPS Multipath Error and its
+                            Mitigation using Spectral Analysis Technique</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">92</td>
+                        <td class="number text-center">2010</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">B.Neeraja</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Analysis of Ionospheric time Delay using
+                            IRI-2007 Model for Navigation Application</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">93</td>
+                        <td class="number text-center">2010</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">K.J.Silva Lorraine</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Analysis of Near_Far Problem and its
+                            Mitigation by signal pulsing in Pseudolite</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">94</td>
+                        <td class="number text-center">2010</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">P.Selva Rosaline</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Investigation and Estimation of Time
+                            Difference of Navigation Receivers</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">95</td>
+                        <td class="number text-center">2010</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">M.Shravani</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Performance Analysis of FHCDMA system in
+                            Wireless Channels using Read-Solomon codes</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">96</td>
+                        <td class="number text-center">2010</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">V.Manjula</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Design of Wavelet packet OFDM Radar Signal</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">97</td>
+                        <td class="number text-center">2011</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">K.Madhu krishna</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Effect of Latency on User Position Accuracy
+                            for Pseudolite Based Tracking System</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">98</td>
+                        <td class="number text-center">2011</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">G.Santhosh Kumar</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Design of an Optimized Filter for
+                            mininization of ionosphere Divergence Error
+                            in GPS Mesasurements </td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">99</td>
+                        <td class="number text-center">2011</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">M.R.Sriharsha</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Evaluation of single and Dual Frequency
+                            carrier Smoothing Techniques for LAAS</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">100</td>
+                        <td class="number text-center">2011</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">P.Naga Praveen</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Acquisition and Analysis of ECG signals and
+                            GPS data</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">101</td>
+                        <td class="number text-center">2011</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Shoeb Mohammed</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Statistical Analysis of Ionospheric Time Delays for GPS Applications</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">102</td>
+                        <td class="number text-center">2011</td>
+                        <td class="string">PHD</td>
+                        <td class="string">D.Venkata Ratnam</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Investigation and development of
+                            Ionospheric Time Delay Models using GPS
+                            and CRABEX Signals</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">103</td>
+                        <td class="number text-center">2012</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Mounica J</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Implementation of ASR Using C Language</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">104</td>
+                        <td class="number text-center">2012</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Sandeep</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Evaluation Of The Effects Of Speech Coding On Performance Using HTK</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">105</td>
+                        <td class="number text-center">2012</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Srikanth</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Class Room Data Base Management Using ASR</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">106</td>
+                        <td class="number text-center">2012</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">B.Jhansi</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Evaluation of Local Area Augmentation
+                            System (LAAS) Availability</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">107</td>
+                        <td class="number text-center">2012</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Syed Mohammed Waris</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Analysis of Ionospheric Effects on Horizontal
+                            Protection Level and position Error in LAAS</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">108</td>
+                        <td class="number text-center">2012</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Suresh S</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Investigation of Performance of Various LMS
+                            Adaptive Algorithms to Mitigate GPS
+                            Multipath Error</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">109</td>
+                        <td class="number text-center">2012</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Vikram G</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Characterizing the Variability of Ionospheric
+                            TEC Using Statistical Methods</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">110</td>
+                        <td class="number text-center">2012</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">V.Sarala</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Ionospheric Threat Analysis of Local Are
+                            Augmentation System</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">111</td>
+                        <td class="number text-center">2012</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">A.Swetha</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Estimation of VTEC using Taylor Series
+                            Expansion Model</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">112</td>
+                        <td class="number text-center">2012</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Suneetha Emmela</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Performance Analysis of GNSS Satellite
+                            Selection Technique for Optimal DOP</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">113</td>
+                        <td class="number text-center">2012</td>
+                        <td class="string">PHD</td>
+                        <td class="string">Ashwini Kumar</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Design and Development and Characterization of High Performance Noval
+                            Microwave Antennas for GNSS</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">114</td>
+                        <td class="number text-center">2012</td>
+                        <td class="string">PHD</td>
+                        <td class="string">Dhiraj Sunehra</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Analysis of Dual Frequency GPS data for
+                            Estimation of Instrumental Biases and TEC
+                            for GAGAN Applications</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">115</td>
+                        <td class="number text-center">2012</td>
+                        <td class="string">PHD</td>
+                        <td class="string">AV Ramana</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Effects of Speech Coding On The Performance Of ASR Over Wired And Wireless
+                            Networks</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">116</td>
+                        <td class="number text-center">2013</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Pavan</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Development of GLONASS Software Receiver</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">GNSS</td>
+                        <td class="string">VBIT </td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">117</td>
+                        <td class="number text-center">2013</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Tirumal</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">ASR With Pocket Sphinx On Blackfin Processor</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string">University college of Engineering,O.U</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">118</td>
+                        <td class="number text-center">2013</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Gangadhar</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Effects of channel conditions on the performance of ASR over GSM networks
+                            using full rate speech codec</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string">Siddhartha college of engineering </td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">119</td>
+                        <td class="number text-center">2013</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Ram Reddy</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Speech synthesis system for Indian accent using Festvox</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string">Bharath college of engineering</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">120</td>
+                        <td class="number text-center">2013</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Md.Abid Hussain</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Comprative Analysis of Horizontal Position
+                            Accuracy of GSM and GPS </td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">121</td>
+                        <td class="number text-center">2013</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Mohd Qurran Javeed</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Analysis of Tropospheric Effect on Local Area
+                            Augumentation System</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">122</td>
+                        <td class="number text-center">2013</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Chaitanya Krishna Kondra</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Investigation of Space Weather Effects on Ionospheric Time Delay og GPS
+                            Signals Over the Indian Region</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">123</td>
+                        <td class="number text-center">2013</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">P.Yashasvi</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Investigation of the Effect of EIA on Indian GBAS</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">124</td>
+                        <td class="number text-center">2013</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Ayesha Tabassum</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Investigation of Tropospheric Time Delay
+                            Effect on LAAS during Atmospheric
+                            Turbulance</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">125</td>
+                        <td class="number text-center">2013</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">P.V.MuraliKrishna</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">VLSI Realization of a Scheme Transmission
+                            Of Multiple Images </td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">126</td>
+                        <td class="number text-center">2013</td>
+                        <td class="string">PHD</td>
+                        <td class="string">K.Yedukondalu</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Analysis and Mitigation of GNSS Multipath
+                            using Spectral and Adaptive Filtering
+                            Methods</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">127</td>
+                        <td class="number text-center">2013</td>
+                        <td class="string">PHD</td>
+                        <td class="string">K.Satyanarayana </td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">GPS-GPRS based Emergency Patient
+                            Transportation Systemand Evaluation of
+                            Physiological Parameters</td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">128</td>
+                        <td class="number text-center">2014</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">K.Chaitanya</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Development Of Boosting Based Face Detection Algorithm</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">IP</td>
+                        <td class="string">Vasavi college of Engineering</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">129</td>
+                        <td class="number text-center">2014</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Roohi</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Computerized Segmentation Methods To Detect Disorders In Medical Images</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">BMSP</td>
+                        <td class="string">Vasavi college of Engineering</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">130</td>
+                        <td class="number text-center">2014</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Vandana</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Face Detection Using Active Appearance Model</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">IP</td>
+                        <td class="string">Vasavi college of Engineering</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">131</td>
+                        <td class="number text-center">2014</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Sukanya</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Embedded Linux On Blackfin Processor For Audio & Video Algorithms</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">RTSP</td>
+                        <td class="string">MLR institue of Tecgnology</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">132</td>
+                        <td class="number text-center">2014</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Gayatri</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Implementation Of Acquisition Algorithm For GLONASS Software Receiver In
+                            Fixed C</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">GNSS</td>
+                        <td class="string">Narayanamma Engineering college for woman</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">133</td>
+                        <td class="number text-center">2014</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Saicharan</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Development Of Acquisition Module Of A GPS Software Receiver In Fixed-Point-C
+                        </td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">GNSS</td>
+                        <td class="string">Vasavi college of Engineering</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">134</td>
+                        <td class="number text-center">2014</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Mounica</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Acquisition Of Galileo Satellite Signals</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">GNSS</td>
+                        <td class="string">Narayanamma Engineering college for woman</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">135</td>
+                        <td class="number text-center">2014</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Sumalata</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">HMM Based Speech Synthesis System</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string">Bapatla engineering college</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">136</td>
+                        <td class="number text-center">2014</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Harish</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string"> Implementation Of MFCC Feature Extraction of Pocket Sphinx In Fixed Point C
+                            For Real Time ASR On Blackfin Processor</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string">Vasavi college of Engineering</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">137</td>
+                        <td class="number text-center">2014</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Jagadish</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Effects of channel conditions on the performance of Automatic Speech
+                            Recognition over GSM networks using EFR speech and channel coding standards</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string">Gurunanak engineering college</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">138</td>
+                        <td class="number text-center">2014</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">C.Anil Kumar</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">VLSI Realization of a Scheme based on Compressive Sensing and FFWPDM for
+                            Secure Transmission of Multiple Images</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">139</td>
+                        <td class="number text-center">2014</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Syed Ahsanullah Hussaini</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Latency Mitigation to Enhance Position Accuracy with DGPS </td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">140</td>
+                        <td class="number text-center">2014</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">IshrathUnisa</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string"> Analysis of Tropospheric Time Delay for LAAS Over Indian Sub-Continent</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">141</td>
+                        <td class="number text-center">2014</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Sohel Ahmed</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Comparative Analysis of DGPS Correction
+                            Prediction using Dynamic Neutral Networks</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">142</td>
+                        <td class="number text-center">2014</td>
+                        <td class="string">PHD</td>
+                        <td class="string">Ch.Gangadhar</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">New Approaches and their VLSI Realization
+                            for Image Cryptography</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">143</td>
+                        <td class="number text-center">2014</td>
+                        <td class="string">PHD</td>
+                        <td class="string">B.V.S.S.N. Raju</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Robust Multiuser Detection in chaotic</td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">144</td>
+                        <td class="number text-center">2014</td>
+                        <td class="string">PHD</td>
+                        <td class="string">Naveen kumar</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string"></td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">145</td>
+                        <td class="number text-center">2015</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Lalitya.P</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Computation of Principal Components of the Face Recognition System using
+                            Neural Network and Hebbian Learning Algorithm</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">IP</td>
+                        <td class="string">Siddhartha college of engineering for women</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">146</td>
+                        <td class="number text-center">2015</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Rajesh.T</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Development Of A Framework For Client and Server Based Applications Using
+                            Speech Recognition</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">RTSP</td>
+                        <td class="string">Geethanjali college of engineering</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">147</td>
+                        <td class="number text-center">2015</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Shabhaz.Md.</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Implementation of Automatic Speech Recognition using Fixed Point C on
+                            Blackfin Processor</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string">University college of Engineering,O.U</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">148</td>
+                        <td class="number text-center">2016</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Farheen Tabassum</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Segmentation of Speech and Music from an Audio Stream</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string">University college of Engineering,O.U</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">149</td>
+                        <td class="number text-center">2016</td>
+                        <td class="string">PHD</td>
+                        <td class="string">T Surya narayana murthy</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string"></td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">150</td>
+                        <td class="number text-center">2017</td>
+                        <td class="string">PHD</td>
+                        <td class="string">Supraja</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string"></td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">151</td>
+                        <td class="number text-center">2017</td>
+                        <td class="string">PHD</td>
+                        <td class="string">Satya Srinivas</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string"></td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">152</td>
+                        <td class="number text-center">2017</td>
+                        <td class="string">PHD</td>
+                        <td class="string">Ravi kishore</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string"></td>
+                        <td class="string">Dr.K.Deergha Rao</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">153</td>
+                        <td class="number text-center">2017</td>
+                        <td class="string">PHD</td>
+                        <td class="string">Ravichandra</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string"></td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">154</td>
+                        <td class="number text-center">2017</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Prasanna</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Development of real time face recognition system using open CV</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">IP</td>
+                        <td class="string">Narayanamma Engineering college for woman</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">155</td>
+                        <td class="number text-center">2017</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">K.Niharika</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Implementation and performance analysis of face recognition system</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">IP</td>
+                        <td class="string">Vidhya jyothi Institute of technology</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">156</td>
+                        <td class="number text-center">2017</td>
+                        <td class="string">PHD</td>
+                        <td class="string">K C T Swamy</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string"></td>
+                        <td class="string">Dr.A.D.Sarma</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">157</td>
+                        <td class="number text-center">2017</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">K.Ranadheer</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Smart prescription for android devices using ASR</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string">CMR College of engineering and technology</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">158</td>
+                        <td class="number text-center">2018</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">S.Ravinder</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Automatic Detection of Well Centers in the Analysis of Microplate Images</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">IP</td>
+                        <td class="string">Vasavi college of Engineering</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">159</td>
+                        <td class="number text-center">2018</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">Raghuveer Reddy</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Double Block Zero Padding Acquisition Algorithm for GPS Software Receiver
+                        </td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string">Chittimalla Srinu</td>
+                        <td class="string">GNSS</td>
+                        <td class="string">MLR institue of Tecgnology</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">160</td>
+                        <td class="number text-center">2021</td>
+                        <td class="string">ME/MTECH</td>
+                        <td class="string">D. Ravinder Reddy</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Robust Vector Tracking Loops for GNSS Receivers (Submitted the Thesis)</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string">Chittimalla Srinu</td>
+                        <td class="string">GNSS</td>
+                        <td class="string">JNTUH College of Engineering</td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">161</td>
+                        <td class="number text-center">2021</td>
+                        <td class="string">PHD</td>
+                        <td class="string">P.Mythilisharan</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Automatic Speech Recognition for Telugu </td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">SSP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">162</td>
+                        <td class="number text-center">2022</td>
+                        <td class="string">PHD</td>
+                        <td class="string">B. Balnarsaiah</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Classification of Synthetic Aperture Radar Images using Machine Learning
+                            Algorithms (Submitted The Thesis)</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">IP</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">163</td>
+                        <td class="string">On Going</td>
+                        <td class="string">PHD</td>
+                        <td class="string">Chittimalla Srinu</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Development of Real Time NavIC Software Receiver</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">GNSS</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">164</td>
+                        <td class="string">On Going</td>
+                        <td class="string">PHD</td>
+                        <td class="string">S.Saraswathi</td>
+                        <td class="string">abc@xy</td>
+                        <td class="string">Integration of Low Cost MEMS IMU and NavIC</td>
+                        <td class="string">Dr.P.Laxminarayana</td>
+                        <td class="string"></td>
+                        <td class="string">GNSS</td>
+                        <td class="string"></td>
+                        <td class="string"></td>
+                        <td class="string"><a href="./assets/dummy.pdf">Thesis</a></td>
+                        <td class="string"><a href="./assets/dummy.pdf">WebPage</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $('#myTable').dataTable();
+            });
+        </script>
+        <script>
+            var table = new DataTable('#myTable');
+
+table
+    .column('0:visible')
+    .order('desc')
+    .draw();
+            function sortTable(n) {
+                var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+                table = document.getElementById("myTable");
+                switching = true;
+                dir = "asc";
+                while (switching) {
+                    switching = false;
+                    rows = table.rows;
+
+                    for (i = 1; i < (rows.length - 1); i++) {
+                        shouldSwitch = false;
+                        x = rows[i].getElementsByTagName("TD")[n];
+                        y = rows[i + 1].getElementsByTagName("TD")[n];
+
+                        if (dir == "asc") {
+                            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        } else if (dir == "desc") {
+                            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                    }
+                    if (shouldSwitch) {
+                        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                        switching = true;
+                        switchcount++;
+                    } else {
+                        if (switchcount == 0 && dir == "asc") {
+                            dir = "desc";
+                            switching = true;
+                        }
+                    }
+                }
+            }
+        </script>
+</body>
+
+<footer class="py-3 mt-4 bg-info">
+    <ul class="nav justify-content-center fw-bolder border-bottom pb-3 mb-3">
+        <li class="nav-item">
+            <a href="/index.html" class="nav-link px text-muted"><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="/workshop.html" class="nav-link px text-muted"><i class="fa-solid fa-window-restore"></i>
+                Courses/Workshops</a>
+        </li>
+        <li class="nav-item">
+            <a href="/project.html" class="nav-link px text-muted"><i class="fa-solid fa-address-book"></i>
+                Projects</a>
+        </li>
+        <li class="nav-item">
+            <a href="/publication.html" class="nav-link px text-muted"><i class="fa-solid fa-file-lines"></i>
+                Publications</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link px text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+                    class="fa-solid fa-tag"></i> Infrastructure</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./lab.html"> Lab / Equipment</a></li>
+                <li><a class="dropdown-item" href="./library.html"> Library</a></li>
+                <li><a class="dropdown-item" href="./auditorium.html"> Auditorium</a></li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link px text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+                    class="fa-solid fa-tag"></i> Staff</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./scientificStaff.html"> Scientific Staff</a></li>
+                <li><a class="dropdown-item" href="./technicalStaff.html"> Technical Staff</a></li>
+                <li><a class="dropdown-item" href="./administrativeStaff.html"> Administrative Staff</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="/students.html" class="nav-link px text-muted"><i class="fa-solid fa-clipboard-user"></i>
+                Students</a>
+        </li>
+        <li class="nav-item">
+            <a href="./opportunities.html" class="nav-link px text-muted"><i class="fa-solid fa-lightbulb"></i>
+                Opportunities</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link px text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+                    class="fa-solid fa-download"></i>
+                Resources
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./assets/NavIC/">Open Source Codes</a></li>
+                <li><a class="dropdown-item" href="./assets/NavIC_DataSets/">Datasets</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="/gallery.html" class="nav-link px text-muted"><i class="fa-solid fa-image"></i>
+                Gallery</a>
+        </li>
+        <li class="nav-item">
+            <a href="/contact.html" class="nav-link px text-muted"><i class="fa-solid fa-address-book"></i>
+                Contact Us</a>
+        </li>
+    </ul>
+    <p class="text-center fw-bold fs-4 text-muted">Research and Training Unit for Navigational Electronics (NERTU),
+        Osmania University, Hyderabad, INDIA</p>
+</footer>
+
+</html>

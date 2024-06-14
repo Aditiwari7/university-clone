@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NERTU</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.dataTables.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top">
+        <div class="container-fluid mx-3">
+            <a class="navbar-brand fw-bold" href="#"><img src="assets/nertulogo.jpeg"
+                    style="height: 35px; padding-right: 5px; margin-top: -5pt;" />NERTU</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse  fw-bolder" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 ms-lg-5 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="/index.html" class="nav-link" aria-current="page"><i class="fa-solid fa-house"></i>
+                            Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/workshop.html" class="nav-link"><i class="fa-solid fa-window-restore"></i>
+                            Courses/Workshops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/project.html" class="nav-link"><i class="fa-solid fa-address-book"></i>
+                            Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/publication.html" class="nav-link"><i class="fa-solid fa-file-lines"></i>
+                            Publications</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-tag"></i> Infrastructure
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./lab.html"> Labs / Equipment</a></li>
+                            <li><a class="dropdown-item" href="./library.html"> Library</a></li>
+                            <li><a class="dropdown-item" href="./auditorium.html"> Auditorium</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-clipboard-user"></i> Staff
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./scientificStaff.html"> Scientific Staff</a></li>
+                            <li><a class="dropdown-item" href="./technicalStaff.html"> Technical Staff</a></li>
+                            <li><a class="dropdown-item" href="./administrativeStaff.html"> Administrative Staff</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/students.html" class="nav-link px text-muted"><i
+                                class="fa-solid fa-clipboard-user"></i> Students</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./opportunities.html" class="nav-link px text-muted"><i class="fa-solid fa-lightbulb"></i>
+                            Opportunities</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-download"></i> Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./assets/NavIC/"> Open Source Code</a></li>
+                            <li><a class="dropdown-item" href="./assets/NavIC_DataSets/"> Datasets</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/gallery.html" class="nav-link"><i class="fa-solid fa-image"></i> Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact.html" class="nav-link"><i class="fa-solid fa-address-book"></i> Contact
+                            Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="workshop" class="mt-5 pt-2">
+        <h1 class="text-center font-bold text-danger py-5" style="font-size: 40px">
+            OPPORTUNITIES
+        </h1>
+        <div class="m-5" style="border: 10px;">
+            <h3 class="font-bold text-info pt-2" style="font-size: 30px">
+                Open
+            </h3>
+            <table class="table table-striped table-bordered border-dark">
+                <thead>
+                    <tr>
+                        <th class="number text-center">S.No</th>
+                        <th class="string text-center">Advt. Date</th>
+                        <th class="string text-center">Advt. Title</th>
+                        <th class="string text-center">Last Date to Apply</th>
+                        <th class="string text-center">Status</th>
+                        <th class="string text-center">Link to Advt.</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr>
+                        <td class="number text-center">1</td>
+                        <td class="string">01/06/2024
+                        </td>
+                        <td class="string">Advt. for Assistant Teacher</td>
+                        <td class="string">15/06/2024</td>
+                        <td class="string">Completed</td>
+                        <td class="string"><a href="./assets/dummy.pdf">Click to get Advt. (file)</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">2</td>
+                        <td class="string">12/06/2024
+                        </td>
+                        <td class="string">Advt. for Assistant Teacher</td>
+                        <td class="string">30/06/2024</td>
+                        <td class="string">Completed</td>
+                        <td class="string"><a href="./assets/dummy.pdf">Click to get Advt. (file)</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="m-5" style="border: 10px;">
+            <h3 class="font-bold text-info pt-5" style="font-size: 30px">
+                Closed
+            </h3>
+            <table id="myTable" class="table table-striped table-bordered border-dark">
+                <thead>
+                    <tr>
+                        <th class="number text-center" onclick="sortTable(0)">S.No</th>
+                        <th class="string text-center" onclick="sortTable(1)">Advt. Date</th>
+                        <th class="string text-center" onclick="sortTable(2)">Advt. Title</th>
+                        <th class="string text-center" onclick="sortTable(3)">Last Date to Apply</th>
+                        <th class="string text-center" onclick="sortTable(4)">Status</th>
+                        <th class="string text-center" onclick="sortTable(5)">Link to Advt.</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr>
+                        <td class="number text-center">1</td>
+                        <td class="string">22/05/2024
+                        </td>
+                        <td class="string">Advt. for Assistant Teacher</td>
+                        <td class="string">30/05/2024</td>
+                        <td class="string">On-going</td>
+                        <td class="string"><a href="./assets/dummy.pdf">Click to get Advt. (file)</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">2</td>
+                        <td class="string">2/05/2024
+                        </td>
+                        <td class="string">Advt. for Assistant Teacher</td>
+                        <td class="string">30/05/2024</td>
+                        <td class="string">Completed</td>
+                        <td class="string"><a href="./assets/dummy.pdf">Click to get Advt. (file)</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">3</td>
+                        <td class="string">12/04/2024
+                        </td>
+                        <td class="string">Advt. for Assistant Teacher</td>
+                        <td class="string">30/04/2024</td>
+                        <td class="string">Completed</td>
+                        <td class="string"><a href="./assets/dummy.pdf">Click to get Advt. (file)</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">4</td>
+                        <td class="string">1/04/2024
+                        </td>
+                        <td class="string">Advt. for Assistant Teacher</td>
+                        <td class="string">30/04/2024</td>
+                        <td class="string">Completed</td>
+                        <td class="string"><a href="./assets/dummy.pdf">Click to get Advt. (file)</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">5</td>
+                        <td class="string">15/03/2024
+                        </td>
+                        <td class="string">Advt. for Assistant Teacher</td>
+                        <td class="string">30/03/2024</td>
+                        <td class="string">Completed</td>
+                        <td class="string"><a href="./assets/dummy.pdf">Click to get Advt. (file)</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">6</td>
+                        <td class="string">1/03/2024
+                        </td>
+                        <td class="string">Advt. for Assistant Teacher</td>
+                        <td class="string">30/03/2024</td>
+                        <td class="string">Completed</td>
+                        <td class="string"><a href="./assets/dummy.pdf">Click to get Advt. (file)</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">7</td>
+                        <td class="string">15/02/2024
+                        </td>
+                        <td class="string">Advt. for Assistant Teacher</td>
+                        <td class="string">28/02/2024</td>
+                        <td class="string">Completed</td>
+                        <td class="string"><a href="./assets/dummy.pdf">Click to get Advt. (file)</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">8</td>
+                        <td class="string">1/02/2024
+                        </td>
+                        <td class="string">Advt. for Assistant Teacher</td>
+                        <td class="string">28/02/2024</td>
+                        <td class="string">Completed</td>
+                        <td class="string"><a href="./assets/dummy.pdf">Click to get Advt. (file)</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">9</td>
+                        <td class="string">25/01/2024
+                        </td>
+                        <td class="string">Advt. for Assistant Teacher</td>
+                        <td class="string">30/01/2024</td>
+                        <td class="string">Completed</td>
+                        <td class="string"><a href="./assets/dummy.pdf">Click to get Advt. (file)</a></td>
+                    </tr>
+                    <tr>
+                        <td class="number text-center">10</td>
+                        <td class="string">22/01/2024
+                        </td>
+                        <td class="string">Advt. for Assistant Teacher</td>
+                        <td class="string">30/01/2024</td>
+                        <td class="string">Completed</td>
+                        <td class="string"><a href="./assets/dummy.pdf">Click to get Advt. (file)</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $('#myTable').dataTable();
+            });
+        </script>
+        <script>
+            var table = new DataTable('#myTable');
+
+            table
+                .column('0:visible')
+                .order('desc')
+                .draw();
+            function sortTable(n) {
+                var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+                table = document.getElementById("myTable");
+                switching = true;
+                dir = "asc";
+                while (switching) {
+                    switching = false;
+                    rows = table.rows;
+
+                    for (i = 1; i < (rows.length - 1); i++) {
+                        shouldSwitch = false;
+                        x = rows[i].getElementsByTagName("TD")[n];
+                        y = rows[i + 1].getElementsByTagName("TD")[n];
+
+                        if (dir == "asc") {
+                            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        } else if (dir == "desc") {
+                            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                    }
+                    if (shouldSwitch) {
+                        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                        switching = true;
+                        switchcount++;
+                    } else {
+                        if (switchcount == 0 && dir == "asc") {
+                            dir = "desc";
+                            switching = true;
+                        }
+                    }
+                }
+            }
+        </script>
+</body>
+
+<footer class="py-3 mt-4 bg-info">
+    <ul class="nav justify-content-center fw-bolder border-bottom pb-3 mb-3">
+        <li class="nav-item">
+            <a href="/index.html" class="nav-link px text-muted"><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="/workshop.html" class="nav-link px text-muted"><i class="fa-solid fa-window-restore"></i>
+                Courses/Workshops</a>
+        </li>
+        <li class="nav-item">
+            <a href="/project.html" class="nav-link px text-muted"><i class="fa-solid fa-address-book"></i>
+                Projects</a>
+        </li>
+        <li class="nav-item">
+            <a href="/publication.html" class="nav-link px text-muted"><i class="fa-solid fa-file-lines"></i>
+                Publications</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link px text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+                    class="fa-solid fa-tag"></i> Infrastructure</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./lab.html"> Lab / Equipment</a></li>
+                <li><a class="dropdown-item" href="./library.html"> Library</a></li>
+                <li><a class="dropdown-item" href="./auditorium.html"> Auditorium</a></li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link px text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+                    class="fa-solid fa-tag"></i> Staff</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./scientificStaff.html"> Scientific Staff</a></li>
+                <li><a class="dropdown-item" href="./technicalStaff.html"> Technical Staff</a></li>
+                <li><a class="dropdown-item" href="./adminStaff.html"> Administrative Staff</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="/students.html" class="nav-link px text-muted"><i class="fa-solid fa-clipboard-user"></i>
+                Students</a>
+        </li>
+        <li class="nav-item">
+            <a href="./opportunities.html" class="nav-link px text-muted"><i class="fa-solid fa-lightbulb"></i>
+                Opportunities</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link px text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+                    class="fa-solid fa-download"></i>
+                Resources
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./assets/NavIC/">Open Source Codes</a></li>
+                <li><a class="dropdown-item" href="./assets/NavIC_DataSets/">Datasets</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="/gallery.html" class="nav-link px text-muted"><i class="fa-solid fa-image"></i>
+                Gallery</a>
+        </li>
+        <li class="nav-item">
+            <a href="/contact.html" class="nav-link px text-muted"><i class="fa-solid fa-address-book"></i>
+                Contact Us</a>
+        </li>
+    </ul>
+    <p class="text-center fw-bold fs-4 text-muted">Research and Training Unit for Navigational Electronics (NERTU),
+        Osmania University, Hyderabad, INDIA</p>
+</footer>
+
+</html>

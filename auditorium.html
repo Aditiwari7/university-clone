@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NERTU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top">
+        <div class="container-fluid mx-3">
+            <a class="navbar-brand fw-bold" href="#"><img src="assets/nertulogo.jpeg"
+                    style="height: 35px; padding-right: 5px; margin-top: -5pt;" />NERTU</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse  fw-bolder" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 ms-lg-5 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="/index.html" class="nav-link" aria-current="page"><i class="fa-solid fa-house"></i>
+                            Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/workshop.html" class="nav-link"><i class="fa-solid fa-window-restore"></i>
+                            Courses/Workshops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/project.html" class="nav-link"><i class="fa-solid fa-address-book"></i>
+                            Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/publication.html" class="nav-link"><i class="fa-solid fa-file-lines"></i>
+                            Publications</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-tag"></i> Infrastructure
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./lab.html"> Labs / Equipment</a></li>
+                            <li><a class="dropdown-item" href="./library.html"> Library</a></li>
+                            <li><a class="dropdown-item" href="./auditorium.html"> Auditorium</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-clipboard-user"></i> Staff
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./scientificStaff.html"> Scientific Staff</a></li>
+                            <li><a class="dropdown-item" href="./technicalStaff.html"> Technical Staff</a></li>
+                            <li><a class="dropdown-item" href="./administrativeStaff.html"> Administrative Staff</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/students.html" class="nav-link px text-muted"><i
+                                class="fa-solid fa-clipboard-user"></i> Students</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./opportunities.html" class="nav-link px text-muted"><i class="fa-solid fa-lightbulb"></i>
+                            Opportunities</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-download"></i> Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./assets/NavIC/"> Open Source Code</a></li>
+                            <li><a class="dropdown-item" href="./assets/NavIC_DataSets/"> Datasets</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/gallery.html" class="nav-link"><i class="fa-solid fa-image"></i> Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact.html" class="nav-link"><i class="fa-solid fa-address-book"></i> Contact
+                            Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="workshop" class="mt-5 pt-5 mx-5 px-5">
+        <h1 class="text-center font-bold text-danger pt-2 pb-5" style="font-size: 40px">
+            AUDITORIUM
+        </h1>
+
+        <div>
+            <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <img src="" class="img-fluid" id="modalImage" aria-hidden="true">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center font-bold">
+            "NERTU auditorium can accommodate 55-70 people. In this auditorium,
+            NERTU has conducted various courses, workshops, symposia, schools, etc".
+            <br><br>
+            An auditorium is a large space or hall designed to accommodate an
+            audience for various performances, presentations, lectures, and other
+            events. It is typically found in theaters, schools, universities,
+            community centers, and other public buildings. Here are some key
+            features and components of an auditorium:
+        </div>
+        <div id="carouselExamplePause" class="carousel carousel-dark slide mx-4 p-3 pt-3 bg-light" data-bs-ride="carousel"
+            data-bs-pause="true">
+            <div class="carousel-action-bar">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </div>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="600" height="550"
+                        src="./assets/auditorium/Auditorium_1.jpg" role="img" aria-label="Placeholder: Third slide"
+                        preserveAspectRatio="xMidYMid slice" focusable="false" data-bs-toggle="modal" data-bs-target="#imageModal"
+                        onclick="showImage('assets/auditorium/Auditorium_1.jpg')"/>
+                </div>
+                <div class="carousel-item">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="600" height="550"
+                        src="./assets/auditorium/Auditorium_2.jpg" role="img" aria-label="Placeholder: Third slide"
+                        preserveAspectRatio="xMidYMid slice" focusable="false" data-bs-toggle="modal" data-bs-target="#imageModal"
+                        onclick="showImage('assets/auditorium/Auditorium_2.jpg')"/>
+                </div>
+            </div>
+            <button class="carousel-control-prev bg-light" type="button" data-bs-target="#carouselExamplePause"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next bg-light" type="button" data-bs-target="#carouselExamplePause"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function showImage(imageSrc) {
+            document.getElementById("modalImage").src = imageSrc;
+            $('#imageModal').modal('show');
+        }
+    </script>
+
+</body>
+
+<footer class="py-3 mt-4 bg-info">
+    <ul class="nav justify-content-center fw-bolder border-bottom pb-3 mb-3">
+        <li class="nav-item">
+            <a href="/index.html" class="nav-link px text-muted"><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="/workshop.html" class="nav-link px text-muted"><i class="fa-solid fa-window-restore"></i>
+                Courses/Workshops</a>
+        </li>
+        <li class="nav-item">
+            <a href="/project.html" class="nav-link px text-muted"><i class="fa-solid fa-address-book"></i>
+                Projects</a>
+        </li>
+        <li class="nav-item">
+            <a href="/publication.html" class="nav-link px text-muted"><i class="fa-solid fa-file-lines"></i>
+                Publications</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link px text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+                    class="fa-solid fa-tag"></i> Infrastructure</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./lab.html"> Lab / Equipment</a></li>
+                <li><a class="dropdown-item" href="./library.html"> Library</a></li>
+                <li><a class="dropdown-item" href="./auditorium.html"> Auditorium</a></li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link px text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+                    class="fa-solid fa-tag"></i> Staff</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./scientificStaff.html"> Scientific Staff</a></li>
+                <li><a class="dropdown-item" href="./technicalStaff.html"> Technical Staff</a></li>
+                <li><a class="dropdown-item" href="./administrativeStaff.html"> Administrative Staff</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="/students.html" class="nav-link px text-muted"><i class="fa-solid fa-clipboard-user"></i>
+                Students</a>
+        </li>
+        <li class="nav-item">
+            <a href="./opportunities.html" class="nav-link px text-muted"><i class="fa-solid fa-lightbulb"></i>
+                Opportunities</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link px text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+                    class="fa-solid fa-download"></i>
+                Resources
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./assets/NavIC/">Open Source Codes</a></li>
+                <li><a class="dropdown-item" href="./assets/NavIC_DataSets/">Datasets</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="/gallery.html" class="nav-link px text-muted"><i class="fa-solid fa-image"></i>
+                Gallery</a>
+        </li>
+        <li class="nav-item">
+            <a href="/contact.html" class="nav-link px text-muted"><i class="fa-solid fa-address-book"></i>
+                Contact Us</a>
+        </li>
+    </ul>
+    <p class="text-center fw-bold fs-4 text-muted">Research and Training Unit for Navigational Electronics (NERTU),
+        Osmania University, Hyderabad, INDIA</p>
+</footer>
+
+</html>
